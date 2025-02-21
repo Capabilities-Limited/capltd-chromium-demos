@@ -11,7 +11,7 @@ else
     real_user=$(whoami)
 fi
 
-echo "DSbD Showcase 2025-02-11 Chromium Demo"
+echo "Chromium Demo setup"
 
 ###############################################################################
 # Dependencies for Chromium (is_component = false).
@@ -19,11 +19,13 @@ echo "DSbD Showcase 2025-02-11 Chromium Demo"
 # Dependencies to check:
 # borringssl probably isn't necessary as it is embedded in nss.
 #
+# Recently completed (but not needed by the demo):
+#     dav1d
+#     jsoncpp
+#
 # Missing (but not needed in the demo):
-#     dav1d - patches ready but no official port
 #     expat2 - no patches for this
 #     harfbuzz-icu - no patches for this
-#     jsoncpp - no patches for this
 #     libsecret - no patches for this
 #     speech-dispatch - no patches ready for this
 #     speex - no patches ready for this
