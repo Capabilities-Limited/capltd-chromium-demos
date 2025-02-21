@@ -39,6 +39,6 @@ else
 fi
 
 if [ ! -f /home/demo/.local/share/applications/chromium-browser.desktop ]; then
-    mkdir -p /home/demo/.local/share/applications
-    cp chromium-browser.desktop /home/demo/.local/share/applications
+    sudo -u $real_user mkdir -p /home/demo/.local/share/applications
+    sudo -u $real_user cp cheriabi-chromium-browser.desktop /home/demo/.local/share/applications
 fi
