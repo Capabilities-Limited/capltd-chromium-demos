@@ -6,7 +6,7 @@ Name=Chromium CheriABI
 Comment=Pure Capability Chromium prototype
 Icon=chrome
 TryExec=/home/demo/chromium_standalone/chrome
-Exec=/home/demo/chromium_standalone/chrome --user-data-dir=$(mktemp -d_ --js-flags="--jitless regexp-interpret-all" http://localhost
+Exec=/home/demo/chromium_standalone/chrome --user-data-dir=$(mktemp -d) --js-flags="--jitless --regexp-interpret-all" http://localhost
 Categories=Application;Network;WebBrowser;
 MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;
 StartupNotify=true
