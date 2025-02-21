@@ -37,3 +37,8 @@ else
     echo "Installing Chromium runtime dependencies"
     pkg64c install -y $CHROMIUM_RUNTIME_DEPS
 fi
+
+if [ ! -f /home/demo/.local/share/applications/chromium-browser.desktop ]; then
+    mkdir -p /home/demo/.local/share/applications
+    cp chromium-browser.desktop /home/demo/.local/share/applications
+fi
