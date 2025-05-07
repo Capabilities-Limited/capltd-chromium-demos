@@ -31,7 +31,7 @@ echo "Chromium Demo setup"
 #     speex - no patches ready for this
 #     snappy - no patches ready for this
 ###############################################################################
-CHROMIUM_RUNTIME_DEPS="at-spi2-core cairo cups dbus dbus-glib flac fontconfig freetype2 glib gtk3 harfbuzz icu libdrm libepoll-shim libevent libexif libffi libgcrypt libpci libxkbcommon libxshmfence libxml2 libxslt mesa-libs noto-basic nspr nss openh264 opus png pango re2 wayland"
+CHROMIUM_RUNTIME_DEPS="at-spi2-core cairo cups dbus dbus-glib flac fontconfig freetype2 glib gtk3 harfbuzz icu libdrm libepoll-shim libevent libexif libffi libgcrypt libpci libxkbcommon libxshmfence libxml2 libxslt mesa-libs noto-basic nspr nss openh264 opus png pango re2 wayland webp"
 
 if $(pkg64c check -d $CHROMIUM_RUNTIME_DEPS); then
     echo "All Chromiumn runtime dependencies found"
