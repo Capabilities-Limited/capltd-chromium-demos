@@ -24,14 +24,20 @@ if [ ! -e /usr/local/etc/nginx ]; then
 fi
 cp nginx.conf /usr/local/etc/nginx-cheri/nginx.conf
 if [ ! -d /usr/local/www/dsbd-demo ]; then
-    if $(pkg64c check -d wget); then
+    if $(pkg64 check -d wget); then
         echo "wget installed"
     else
         echo "Installing wget"
-	pkg64c install -y wget 
+	pkg64 install -y wget
     fi
     wget -r -k -p --no-parent https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/
     mv www.cl.cam.ac.uk /usr/local/www/dsbd-demo
+fi
+if $(pkg64 check -d rsync); then
+    echo "rsync installed"
+else
+    echo "Installing rsync"
+    pkg64 install -y rsync
 fi
 rsync -rv exploits-demo/ /usr/local/www/exploits/
 
